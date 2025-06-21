@@ -1,0 +1,104 @@
+:root {
+    --light-brown: #b79e8d;
+    --light-gray: #e0e0e0;
+}
+
+/* 背景色全画面 */
+body {
+    background-color: #f8f5f2;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* タイトル中央寄せ */
+.confirm__heading h2 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
+
+/* テーブル全体設定 */
+.confirm-table__inner {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* thの見た目（背景色・文字白・枠線非表示） */
+.confirm-table__header {
+    background-color: var(--light-brown);
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    width: 30%;
+    border: 1px solid var(--light-brown);
+    vertical-align: top;
+}
+
+/* tdの見た目 */
+.confirm-table__text {
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    background-color: transparent;
+    text-align: left;
+    color: var(--light-brown);
+}
+
+/* 入力欄共通 */
+.confirm-table__text input[type="text"],
+.confirm-table__text input[type="email"],
+.confirm-table__text input[type="tel"] {
+    background-color: transparent;
+    border: none;
+    color: var(--light-brown);
+    font-size: 1rem;
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 名前欄：間隔をもっと近づける（0.3em程度に） */
+.confirm-table__text input[name="first_name"],
+.confirm-table__text input[name="last_name"] {
+    width: 50px;
+    margin-right: 0em;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+}
+
+/* 電話番号欄：完全にくっつける（間隔なし） */
+.confirm-table__text input[name="tel1"],
+.confirm-table__text input[name="tel2"],
+.confirm-table__text input[name="tel3"] {
+    width: 26px;
+    margin-right: 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* ボタンエリア中央寄せ・横並び */
+.form__button-area {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+/* ボタンの見た目 */
+.form__button-submit {
+    background-color: #6b5847;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    background-color: #5a4c3c;
+}

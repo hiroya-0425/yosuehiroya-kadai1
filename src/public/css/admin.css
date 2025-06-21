@@ -1,0 +1,203 @@
+/* 全体レイアウト */
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+/* ヘッダー右上のログアウト */
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.admin-logout__btn {
+    background-color: #f0f0f0;
+    color: #6b5847;
+    border: 1px solid #6b5847;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+form[action="/logout"] {
+    margin: 0;
+}
+
+/* 見出し */
+.admin-form__heading {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 検索フォーム横並び */
+form[action="/admin"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 5%;
+}
+
+form[action="/admin"] input,
+form[action="/admin"] select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form[action="/admin"] button[type="submit"] {
+    background-color: #6b5847;
+    color: white;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form[action="/admin"] a {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #b6a493;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* エクスポートリンク */
+a[href="/admin/export"] {
+    margin-left: 5%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* テーブル余白とスタイル */
+.admin-table {
+    width: 95%;
+    margin: 2rem auto;
+    overflow-x: auto;
+}
+
+.admin-table__inner {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.admin-table__header {
+    background-color: #b6a493;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.admin-table__row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table__text {
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+/* 詳細ボタン */
+.admin-btn_detail {
+    background-color: #6b5847;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* モーダル中央表示 */
+.admin-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.admin-modal__body {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.admin-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.admin-modal__delete-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ページネーション全体右上配置 */
+.pagination-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 5% 2rem;
+}
+
+/* ボタンラッパー（表示切り替え制御用） */
+.pagination-wrapper {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* ページ番号共通スタイル */
+.pagination-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    line-height: 2rem;
+    margin: 0 0rem;
+}
+
+/* 選択中のページ */
+.pagination-button.active {
+    background-color: #6b5847;
+    color: white;
+    border: none;
+}
+
+/* 「...」などのドットや非リンク */
+.pagination-button.disabled {
+    cursor: default;
+    color: #999;
+}

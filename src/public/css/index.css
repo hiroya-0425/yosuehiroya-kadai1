@@ -1,0 +1,150 @@
+/* --- ベース設定 --- */
+.contact-form__content {
+    background-color: #f4f4f4;
+    padding: 3rem 2rem;
+}
+
+/* 見出し */
+.contact-form__heading h2 {
+    text-align: center;
+    color: #5e4a42;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- フォーム本体（広く・中央に配置） --- */
+.form {
+    background-color: #fff;
+    padding: 3rem;
+    max-width: 900px;
+    /* ←ここを広げた */
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #5e4a42;
+}
+
+/* --- 各項目 --- */
+.form__group {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+/* ラベル（左側） */
+.form__group-title {
+    width: 25%;
+    min-width: 160px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 0.5rem;
+}
+
+/* 「※」は赤 */
+.form__label--required {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+/* 入力欄側（右側） */
+.form__group-content {
+    width: 75%;
+}
+
+/* 入力欄共通スタイル */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 3px;
+    padding: 0.8rem;
+    width: 100%;
+    color: #5e4a42;
+    font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+/* 電話番号欄（横並び） */
+.form__input--text input[type="tel"] {
+    width: 30%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* 性別ラジオボタン */
+.form__input-radio input[type="radio"] {
+    accent-color: #5e4a42;
+    margin-right: 0.3rem;
+}
+
+.form__input-radio {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* セレクトボックスの ▼ 矢印 */
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%235e4a42" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+/* テキストエリア */
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* エラー表示 */
+.form__error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    gap: 4%;
+}
+
+/* 送信ボタン */
+.form__button {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.form__button-submit {
+    background-color: #6b5847;
+    color: white;
+    border: none;
+    padding: 0.8rem 3rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    background-color: #5a4c3c;
+}
+/* 名前欄 横並びレイアウト */
+.form__input--text.name-inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+.form__input--text.name-inputs input[type="text"] {
+    width: 100%;
+    flex: 1;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 3px;
+    padding: 0.8rem;
+    color: #5e4a42;
+    font-size: 1rem;
+}
